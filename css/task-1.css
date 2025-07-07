@@ -1,0 +1,23 @@
+ul,
+li {
+  list-style: none;
+}
+
+.item {
+  background: #f6f6fe;
+  border-radius: 8px;
+  padding: 16px;
+  width: 392px;
+  height: 264px;
+  margin: 24px auto;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin: 16px;
+}
