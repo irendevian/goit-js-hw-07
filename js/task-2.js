@@ -30,17 +30,22 @@ const images = [
 
 const gallery = document.querySelector('.gallery');
 
-for (const image of images) {
-  const li = document.createElement('li');
-  // document.body.ul.append('li');
-  const img = document.createElement('img');
-  img.setAttribute('src', image.url);
-  img.setAttribute('alt', image.alt);
-  img.setAttribute('width', '360');
-  // document.body.li.append('img');
+// for (const image of images) {
+//   const li = document.createElement('li');
+//   // document.body.ul.append('li');
+//   const img = document.createElement('img');
+//   img.setAttribute('src', image.url);
+//   img.setAttribute('alt', image.alt);
+//   img.setAttribute('width', '360');
+//   // document.body.li.append('img');
 
-  li.append(img);
-  gallery.append(li);
-}
+//   li.append(img);
+//   gallery.append(li);
+// }
 
+const galleryMarkup = images
+  .map((image) => `<li><img src="${image.url}" alt="${image.alt}" width="360"></li>`)
+  .join("");
+
+gallery.insertAdjacentHTML("beforeend", galleryMarkup);
 
